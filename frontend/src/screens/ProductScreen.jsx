@@ -7,14 +7,19 @@ import {
   ListGroup,
   Card,
   Button,
-  ListGroupItem,
 } from "react-bootstrap";
 import Rating from "../components/Rating";
 import axios from 'axios';
 
 const ProductScreen = () => {
   const [product, setProduct] = useState({
-
+    name: "",
+    image: "",
+    rating: 0,
+    numReviews: 0,
+    price: 0,
+    description: "",
+    countInStock: 0,
   });
   const { id: productId } = useParams();
   
@@ -27,6 +32,7 @@ const ProductScreen = () => {
     fetchProduct();
 
   }, [productId]);
+  console.log(product)
 
   return (
     <>

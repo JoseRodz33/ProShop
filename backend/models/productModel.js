@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import User from './userModel.js';
 const reviewSchema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
